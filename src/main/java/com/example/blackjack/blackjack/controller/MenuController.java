@@ -8,8 +8,13 @@ import javafx.scene.control.Button;
 
 import java.io.IOException;
 
+/**
+ * MenuController Class
+ *  - controller of "menu.fxml"
+ */
 public class MenuController {
 
+    //---------------Members---------------
     @FXML
     private Button startGameButton;
 
@@ -18,13 +23,24 @@ public class MenuController {
 
 
 
+    //---------------Methods(Control)---------------
+
+    /**
+     * onStartGameClick
+     *  - when startGameButton clicked, switch stage to game
+     * @throws IOException on loading error
+     */
     @FXML
     private void onStartGameClick() throws IOException {
 
-        BlackJackGame.initGame();
         SceneManager.setGame();
     }
 
+
+    /**
+     * onExitGameClick
+     *  - when exitGameButton clicked, exit the program
+     */
     @FXML
     private void onExitGameClick()
     {

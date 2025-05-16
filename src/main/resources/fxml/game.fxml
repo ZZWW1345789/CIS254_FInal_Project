@@ -1,14 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.blackjack.blackjack.controller.GameController"
-            prefHeight="400.0" prefWidth="600.0">
-
-</AnchorPane>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 50.0% 50.0%, radius 86.2069%, #4dbc5c 0.0%, #1b1a1a 100.0%);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.blackjack.blackjack.controller.GameController">
+   <top>
+      <VBox prefHeight="79.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+   </top>
+   <left>
+      <VBox prefHeight="247.0" prefWidth="73.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <VBox prefHeight="247.0" prefWidth="66.0" BorderPane.alignment="CENTER" />
+   </right>
+   <bottom>
+      <HBox alignment="CENTER" BorderPane.alignment="CENTER">
+         <Button fx:id="drawButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onDrawButtonClick" prefHeight="30.0" prefWidth="70.0" text="Draw">
+            <HBox.margin>
+               <Insets bottom="10.0" top="20.0" />
+            </HBox.margin></Button>
+         <Button fx:id="standButton" alignment="CENTER" contentDisplay="CENTER" layoutX="321.0" layoutY="10.0" mnemonicParsing="false" onAction="#onStandButtonClick" prefHeight="30.0" prefWidth="70.0" text="Stand">
+            <HBox.margin>
+               <Insets bottom="10.0" left="300.0" top="20.0" />
+            </HBox.margin>
+         </Button>
+      </HBox>
+   </bottom>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <top>
+            <HBox fx:id="aiCardBox" alignment="CENTER_LEFT" prefHeight="125.0" prefWidth="560.0" spacing="20.0" style="-fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 50.0% 50.0%, radius 50.0%, #749d7f21 0.0%, #00000038 100.0%); -fx-background-radius: 50;" BorderPane.alignment="CENTER_LEFT">
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </HBox>
+         </top>
+         <bottom>
+            <HBox fx:id="playerCardBox" alignment="CENTER_LEFT" prefHeight="125.0" prefWidth="560.0" spacing="20.0" style="-fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 50.0% 50.0%, radius 50.0%, #749d7f21 0.0%, #00000038 100.0%); -fx-background-radius: 50;">
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </HBox>
+         </bottom>
+         <left>
+            <HBox prefHeight="36.0" prefWidth="227.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Player Score:" wrappingWidth="145.20965576171875">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+                  <Label fx:id="playerScoreLabel" prefHeight="28.0" prefWidth="63.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </left>
+         <right>
+            <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dealer Score:" wrappingWidth="145.20965576171875">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+                  <Label fx:id="dealerScoreLabel" prefHeight="28.0" prefWidth="63.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </right>
+      </BorderPane>
+   </center>
+</BorderPane>
