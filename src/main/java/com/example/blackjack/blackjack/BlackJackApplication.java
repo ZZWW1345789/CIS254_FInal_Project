@@ -15,6 +15,10 @@ import java.io.IOException;
  *
  * This is a Black Jack game with GUI
  *  - This is the Main program
+ *  - resource was from:
+ *      https://opengameart.org/content/colorful-poker-card-back
+ *      https://code.google.com/archive/p/vector-playing-cards/wikis
+ *
  *
  */
 
